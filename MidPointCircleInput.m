@@ -1,2 +1,2 @@
-r = 10
+r = 7
 MidPointCircle(r)

@@ -1,6 +1,6 @@
 
-
-function Bresenham_Line_Drawing(p1, p2)
+  p1 = [1 1]
+  p2 = [8 5]
   x = p1(1);
   y = p1(2);
   
@@ -45,5 +45,3 @@ function Bresenham_Line_Drawing(p1, p2)
   endif
   res = points(1:i, : )
   Draw(res);
-    
-endfunction

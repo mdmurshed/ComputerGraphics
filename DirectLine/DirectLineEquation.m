@@ -17,7 +17,7 @@ function DirectLineEquation (p1, p2)
     points(i,:) = [x y]
     
     if m>1
-      for i=2:x2
+      for i=2:y2
         y = y+1;
         x = (y - b)/m;
         points(i,:) = [round(x),round(y)];
@@ -33,5 +33,8 @@ function DirectLineEquation (p1, p2)
     points(i,:) = [x2,y2];
     res = points(1:i, : )
     Draw(res);
-
+    %plot(points(1:i,1:1),points(1:i,2:2),':*r');
+    %xlabel("x axis")
+    %ylabel("y axis")
+    %grid on
 endfunction

@@ -1,7 +1,5 @@
-%Draw([1 2])
-% lucture 4
-% DDA line draw
-p1 = [2,0]
-p2 = [7,4]
+clc
+clear all
+close all
 
-DDA_line_convert(p1,p2)
+axis square

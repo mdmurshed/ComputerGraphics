@@ -1,6 +1,6 @@
 
 
-function retval = Draw (points)
+function Draw (points)
   Xmax = max(points(:,1));
   Ymax = max(points(:,2));
   Xmin = min(points(:,1));

@@ -7,9 +7,10 @@ function retval = TestDraw (points)
   Xmin = min(points(:,1));
   Ymin = min(points(:,2));
   
+  point = points
   points(:,1) += abs(Xmin) + 1;
   points(:,2) += abs(Ymin) + 1;
-  im = zeros(30,30)
+  im = zeros(40,40)
   
   
   
@@ -21,7 +22,9 @@ function retval = TestDraw (points)
   endwhile
   %imagesc(im);
   %imshow(im);
-  points
   image(im)
   axis("xy")
+  hold on
+  plot(-1,-1)
+
 endfunction

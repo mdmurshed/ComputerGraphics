@@ -1,4 +1,6 @@
-
+clc
+clear all
+close all
 p1 = zeros(1,2)
 print = "Enter First x1,x2 value : "
 p1(1) = input("x1 = ")

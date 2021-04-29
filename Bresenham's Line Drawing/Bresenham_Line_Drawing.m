@@ -44,7 +44,9 @@ function Bresenham_Line_Drawing(p1, p2)
     endfor
   endif
   res = points(1:i, : )
-  Draw(res);
+  %Draw(res);
+  %UpdateDraw(res);
+  TestDraw(res);
   
     
 endfunction

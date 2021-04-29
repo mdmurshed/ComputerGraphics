@@ -1,4 +1,6 @@
-  r = 10
+
+
+function MidPointCircle(r)
   x = 0
   y = r
   p = 1 - y
@@ -10,6 +12,9 @@
   while (x<=y)
     point(j,:) = [x,y]
     j++
+    point(j,:) = [y,x]
+    j++
+    
     if p<0
       p = p + 2*x +3;
     else
@@ -33,9 +38,6 @@
 
   temp = [point(1:j-1,:);tempPoints(1:j-2,:)]
   points = [temp;[temp(1:length*2-1,1:1,:)*-1 temp(1:length*2-1,2:2,:)];[temp(1:length*2-1,1:1,:) temp(1:length*2-1,2:2,:)*-1];[temp(1:length*2-1,1:1,:)*-1 temp(1:length*2-1,2:2,:)*-1]]
-
   
   Draw(points)
-  %plot(points(1:j,1:1) points(1:j,2:2))
-  
- 
+endfunction

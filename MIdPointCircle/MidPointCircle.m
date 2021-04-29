@@ -7,11 +7,25 @@ function MidPointCircle(r)
 
   point = zeros(20,2)
 
-  j=1
+  i=1
 
   while (x<=y)
-    point(j,:) = [x,y]
-    j++
+    points(i,:) = [x y]
+    i++;
+    points(i,:) = [x -y]
+    i++;
+    points(i,:) = [-x y]
+    i++;
+    points(i,:) = [-x -y]
+    i++;
+    points(i,:) = [y x]
+    i++;
+    points(i,:) = [y -x]
+    i++;
+    points(i,:) = [-y x]
+    i++;
+    points(i,:) = [-y -x]
+    i++;
     if p<0
       p = p + 2*x +3;
     else
@@ -21,21 +35,6 @@ function MidPointCircle(r)
     x++;
   endwhile
 
-  length = j-1
-  tempPoints = zeros(length,2);
-
-  i = j-1
-  while i>0
-    x = point(i,:)
-    if x(1)!=x(2)
-      tempPoints(i,:) = [x(2),x(1)]
-    endif
-    i--
-  endwhile
-
-  temp = [point(1:j-1,:);tempPoints(1:j-2,:)]
-  points = [temp;[temp(1:length*2-1,1:1,:)*-1 temp(1:length*2-1,2:2,:)];[temp(1:length*2-1,1:1,:) temp(1:length*2-1,2:2,:)*-1];[temp(1:length*2-1,1:1,:)*-1 temp(1:length*2-1,2:2,:)*-1]]
   
   Draw(points)
-
 endfunction
